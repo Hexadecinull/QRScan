@@ -150,7 +150,7 @@ jobs:
           p12-password: ${{ secrets.IOS_P12_PASSWORD }}
 
       - name: Download provisioning profile
-        uses: apple-actions/download-provisioning-profiles@v3
+        uses: apple-actions/download-provisioning-profiles@v6
         with:
           bundle-id: com.hexadecinull.qrscan
           issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
