@@ -43,7 +43,7 @@ jobs:
           ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload Android Debug APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-debug-${{ github.sha }}
           path: android/app/build/outputs/apk/debug/*.apk
@@ -80,7 +80,7 @@ jobs:
           ./gradlew assembleDebug --no-daemon
 
       - name: Upload Android Legacy Debug APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-legacy-debug-${{ github.sha }}
           path: android-legacy/app/build/outputs/apk/debug/*.apk
@@ -119,7 +119,7 @@ jobs:
 
       - name: Upload iOS Debug build log
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ios-debug-log-${{ github.sha }}
           path: ~/Library/Logs/DiagnosticReports/
@@ -177,7 +177,7 @@ jobs:
           jar cf QRScan-bb-debug.jar -C classes .
 
       - name: Upload BlackBerry JAR
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: blackberry-debug-${{ github.sha }}
           path: blackberry/build/QRScan-bb-debug.jar
@@ -216,7 +216,7 @@ jobs:
           ninja -C builddir
 
       - name: Upload postmarketOS binary
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: postmarketos-debug-${{ github.sha }}
           path: postmarketos/builddir/qrscan
