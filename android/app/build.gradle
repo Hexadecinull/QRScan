@@ -141,8 +141,8 @@ dependencies {
     ksp "androidx.room:room-compiler:${rootProject.ext.room_version}"
 
     implementation "io.coil-kt:coil-compose:2.6.0"
-    implementation "com.google.accompanist:accompanist-permissions:0.34.0"
-    implementation "com.google.accompanist:accompanist-systemuicontroller:0.34.0"
+    implementation "com.google.accompanist:accompanist-permissions:0.37.3"
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.37.3"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
