@@ -69,13 +69,13 @@ jobs:
           ./gradlew bundleRelease --no-daemon
 
       - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-release-apk-${{ env.RELEASE_TAG }}
           path: android/app/build/outputs/apk/release/*.apk
 
       - name: Upload AAB artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-release-aab-${{ env.RELEASE_TAG }}
           path: android/app/build/outputs/bundle/release/*.aab
@@ -124,7 +124,7 @@ jobs:
           ./gradlew assembleRelease --no-daemon
 
       - name: Upload Legacy APK artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-legacy-release-apk-${{ env.RELEASE_TAG }}
           path: android-legacy/app/build/outputs/apk/release/*.apk
@@ -179,7 +179,7 @@ jobs:
             -exportOptionsPlist ExportOptions.plist
 
       - name: Upload IPA artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ios-release-ipa-${{ env.RELEASE_TAG }}
           path: ios/build/export/*.ipa

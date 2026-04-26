@@ -48,7 +48,7 @@ jobs:
 
       - name: Upload Lint Report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-lint-report
           path: |
@@ -93,7 +93,7 @@ jobs:
 
       - name: Upload Legacy Lint Report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-legacy-lint-report
           path: android-legacy/app/build/reports/
@@ -118,7 +118,7 @@ jobs:
 
       - name: Upload SwiftLint Report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ios-swiftlint-report
           path: ios/swiftlint-report.json
